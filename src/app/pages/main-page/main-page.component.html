@@ -1,1 +1,6 @@
-<p>main-page works!</p>
+<mat-grid-list cols="3" rowHeight="3:2" >
+    <mat-grid-tile *ngFor="let dog of dogs">
+        <img [src]="dog.link" 
+            [alt]="dog.alt">
+    </mat-grid-tile>
+</mat-grid-list>

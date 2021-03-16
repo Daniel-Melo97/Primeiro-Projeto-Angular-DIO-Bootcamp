@@ -1,0 +1,8 @@
+mat-toolbar {
+    justify-content: space-around;
+}
+
+.active {
+    filter:brightness(150%);
+    border: 2px solid white;
+}
