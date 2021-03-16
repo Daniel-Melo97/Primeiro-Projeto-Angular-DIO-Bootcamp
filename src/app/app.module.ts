@@ -6,15 +6,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
+import { NotFoundComponent } from './assets/not-found/not-found.component';
 
 
 
 const routes: Routes = [{path:'', redirectTo: '/main', pathMatch: 'full' },
-                        {path:'**', redirectTo: '/notFound'}];
+                        {path:'**', component:NotFoundComponent}];
 
 @NgModule({
   declarations: [
     AppComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
