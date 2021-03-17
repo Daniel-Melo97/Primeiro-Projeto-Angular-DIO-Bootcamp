@@ -1,4 +1,4 @@
-import { DogImagesService } from './../../services/dog-images.service';
+import { imagesService } from '../../services/images.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,10 +11,10 @@ export class MainPageComponent implements OnInit {
   dogs!: { link: string, alt: string} [];
 
 
-  constructor(private dogService: DogImagesService) { }
+  constructor(private imageService: imagesService) { }
 
   ngOnInit(): void {
-    this.dogs = this.dogService.retrieveAll();
+    this.dogs = this.imageService.retrieveDogs();
   }
 
 }

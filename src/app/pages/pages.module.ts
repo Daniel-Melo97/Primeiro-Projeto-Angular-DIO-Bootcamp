@@ -5,7 +5,7 @@ import { MaterialModule } from './../material.module';
 import { MainPageComponent } from './main-page/main-page.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DogImagesService } from '../services/dog-images.service';
+import { imagesService } from '../services/images.service';
 
 
 const routes: Routes =[{path:'main', component:MainPageComponent},
@@ -23,6 +23,6 @@ const routes: Routes =[{path:'main', component:MainPageComponent},
     FooterModule,
     RouterModule.forChild(routes)
   ],
-  providers: [DogImagesService]
+  providers: [imagesService]
 })
 export class PagesModule { }

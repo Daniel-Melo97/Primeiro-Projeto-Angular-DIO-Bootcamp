@@ -1,1 +1,8 @@
-<p>page2 works!</p>
+<mat-grid-list cols="3" rowHeight="3:2" >
+    <h1 *ngIf="!plants">Nenhuma foto encontrada!</h1>
+    <mat-grid-tile *ngFor="let plant of plants">
+        <img [src]="plant.link" 
+            [alt]="plant.alt">
+    </mat-grid-tile>
+</mat-grid-list>
+<app-footer color="primary" tema="Plantas"></app-footer>
